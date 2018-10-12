@@ -1,0 +1,10 @@
+@import "../../../styles/_colors";
+
+.page-footer {
+  color: $white;
+  background-color: $dark-grey;
+
+  .page-footer__name {
+    color: $baseColor
+  }
+}

@@ -1,0 +1,26 @@
+<section class="section details-section">
+  <div class="container details-container">
+    <div class="details-header">
+      <h1 class="details__heading">Details</h1>
+    </div>
+    <div *ngIf="!artistDetail && !loading" class="details__no-results-container">
+      <div class="row details__no-results">
+        <h2>No Details found. Please update search criteria.</h2>
+      </div>
+    </div>
+    <div *ngIf="artistDetail && !loading" class="row">
+      <article class="col-md-5">
+        <figure class="details__figure"><img class="details__img" src="{{artistDetail.image_url}}" alt=""></figure>
+      </article>
+      <article class="col-md-6">
+        <h2 class="details__artist-name">{{artistDetail.name}}</h2>
+        <p class="details__desc">You have found the coolest band out there. One of the most important things while creating a band is its
+          name. It helps identify your songs, recordings and events for lifetime. So make sure you have a band name
+          which represents your style and image. To find more about this band click the facebook link below or scroll
+          down to see the latest happening events.</p>
+        <a href="{{artistDetail.facebook_page_url}}" class="fa fa-facebook details__fb-btn" target="_blank"></a>
+      </article>
+    </div>
+    <app-loader *ngIf="loading"></app-loader>
+  </div>
+</section>

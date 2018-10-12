@@ -1,0 +1,82 @@
+@import "../../../styles/colors";
+
+:host {
+  min-height: 30vh;
+}
+
+.details-section {
+  background-color: $white;
+}
+
+.details-header {
+  padding-top: 60px;
+
+  .details__heading {
+    font-weight: bold;
+    line-height: 34px;
+    margin-bottom: 28px;
+    padding-left: 30px;
+    position: relative;
+    text-transform: uppercase;
+
+    &:after {
+      border-left: 13px solid $baseColor;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 13px;
+    }
+  }
+}
+
+.details__artist-name {
+  color: $baseColor;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.details__desc {
+  margin-bottom: 20px;
+  word-spacing: 3px;
+  line-height: 22px;
+}
+
+.details__fb-btn {
+  padding: 20px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  background: #3B5998;
+  color: white;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.details__figure {
+  margin: 0 20px 30px 0;
+
+  .details__img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+}
+
+.details__no-results-container {
+  width: 100%;
+  padding-bottom: 50px;
+
+  .details__no-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: slategray;
+    height: 25vh;
+  }
+}

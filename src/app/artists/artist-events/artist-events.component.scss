@@ -1,0 +1,204 @@
+@import "../../../styles/colors";
+
+:host {
+  min-height: 30vh;
+}
+
+.events-section {
+  background-color: $background-grey;
+
+  .events-container {
+    padding-bottom: 50px;
+    margin-top: 50px;
+  }
+}
+
+.events__header {
+  padding-top: 60px;
+  position: relative;
+
+  .events__heading {
+    font-weight: bold;
+    line-height: 34px;
+    margin-bottom: 28px;
+    padding-left: 30px;
+    position: relative;
+    text-transform: uppercase;
+
+    &:after {
+      border-left: 13px solid $baseColor;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 13px;
+    }
+  }
+
+  .events__type-select {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    outline: none;
+    height: 30px;
+  }
+}
+
+.event-card {
+  margin-bottom: 15px;
+}
+
+.event-card__event-box {
+  background-color: $white;
+  border-radius: 5px;
+  border: 1px solid #ededed;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+  float: left;
+  position: relative;
+  width: 100%;
+
+  &:before {
+    background-color: #dbdee5;
+    border: 1px solid #dbdee5;
+    border-image: none;
+    border-radius: 0 0 50px 50px;
+    content: "";
+    height: 12px;
+    left: 98px;
+    position: absolute;
+    top: -1px;
+    width: 24px;
+    z-index: 9;
+  }
+
+  &:after {
+    background-color: #dbdee5;
+    border: 1px solid #dbdee5;
+    border-image: none;
+    border-radius: 50px 50px 0 0;
+    content: "";
+    height: 12px;
+    left: 98px;
+    position: absolute;
+    bottom: -2px;
+    top: auto;
+    width: 24px;
+    z-index: 9;
+  }
+
+}
+
+.event-card__date {
+  float: left;
+  padding: 70px 0 0;
+  text-align: center;
+  width: 110px;
+
+  .event-card__day {
+    color: #363636;
+    display: block;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 52px;
+    margin: 0 0 3px;
+  }
+
+  .event-card__month {
+    color: #999;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}
+
+.event-card__detail {
+  border-left: 2px dashed #e9e9e9;
+  overflow: hidden;
+  padding: 25px 0 25px 25px;
+  position: relative;
+  width: 78%;
+
+  .event-card__text {
+    overflow: hidden;
+    padding: 0 0 0 25px;
+  }
+
+  .event-card__desc {
+    color: #999;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+
+  .event-card__venue {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+    .event-card__venue--name {
+      color: #2e2e2e;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .event-card__list {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+  }
+
+  .event-card__list-item {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: 15px;
+    width: 100%;
+
+    .fa {
+      color: #d1d1d1;
+      float: left;
+      font-size: 24px;
+    }
+
+    .event-card__full-date, .event-card__address {
+      color: #999;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      margin: 0;
+      padding: 0 0 0 35px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.event-card__ticket-btn {
+  bottom: 10px;
+  position: absolute;
+  right: 10px;
+  background-color: #dbdee5;
+  color: #fff;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 22px;
+  padding: 4px 15px 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $baseColor;
+  }
+}
+
+.events__no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: slategray;
+  height: 25vh;
+}

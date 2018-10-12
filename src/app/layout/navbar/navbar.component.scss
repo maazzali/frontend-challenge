@@ -1,0 +1,20 @@
+@import "../../../styles/_colors";
+
+.navbar {
+  padding: .5rem 2rem;
+
+  .navbar__login-btn {
+    margin-right: 10px;
+    color: $baseColor;
+    border-color: $baseColor;
+    padding: 0.375rem 1rem;
+
+    &:hover { background-color: transparent; }
+  }
+
+  .navbar__sign-up-btn {
+    background-color: $baseColor;
+    border-color: $baseColor;
+    padding: 0.375rem 1rem;
+  }
+}

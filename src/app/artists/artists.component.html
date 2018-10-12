@@ -1,0 +1,26 @@
+<section class="cover d-flex p-3 flex-column">
+  <div class="container">
+    <div class="cover--center-heading">
+      <h1 class="cover__main-heading">Welcome to the largest collection of artists and their events.</h1>
+      <h2 class="">Search for your favorite artist now.</h2>
+      <div class="cover__search-container">
+        <div class="form-inline search-form">
+          <div class="input-group cover__search-bar">
+            <input class="form-control py-2 border-right-0 border cover__input" type="search" placeholder="Search an artist name"
+                   id="example-search-input" #searchTerm>
+            <span class="input-group-append">
+              <button class="btn btn-outline-secondary bg-transparent border-left-0 border cover__button"
+                      (click)="search(searchTerm.value)">
+                <i class="fa fa-search"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-artist-details [artistDetail]="artistDetails" [loading]="isLoading"></app-artist-details>
+<app-artist-events [artistEvent]="artistEvents" [artistName]="searchTerm.value" [loading]="isLoading"
+                   (eventTypeEmitter)="updateEventType($event)"></app-artist-events>
+
